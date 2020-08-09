@@ -12,7 +12,6 @@ def display_app_name():
     print("***********************************")
     print("\nWelcome!! Want to find tasty, tasty recipes?")
     print("Tell me what ingredients you have at home. I will hook you up with an awesome recipe!\n")
-    #print("\nType 'Q' to quit the app anytime.\n")
             
 
 userinput = ''
@@ -29,26 +28,24 @@ while userinput != 'S':
         
         userinput = input("\nTake your pick: ")
         
-        # Respond to the user's choice.
+        #Respond to the user's choice
         if userinput == '1':
             print("\nLet's find you something yummy")
             useringredients = input("\nWhat ingredients do you have at home? (Enter a comma-separated list):\n")
             recipe_finder.find_recipe(useringredients)
-            time.sleep(5)
         elif userinput == '2':
-            recipe_finder.get_shopping_list()
-            time.sleep(5)
+            recipe_finder.show_shopping_list()
         elif userinput == 'S':
             os.system('cls' if os.name == 'nt' else 'clear')
             print("\nEnjoy your meal. Bye!!")
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
             print(r"Sorry, I'm programmed to do only 2 things ¯\_('')_/¯ ")
-            print(r"Let's try again")
+            print("Let's try again")
             time.sleep(5)
     except ValueError as error:
         print(error)
-        print(r"Let's try again")
+        print("\nLet's try again")
         time.sleep(5)
     except:
         print("Oops! I hit some unexpected issue. Please start me again.\n", sys.exc_info()[0])
