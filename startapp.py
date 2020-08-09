@@ -4,7 +4,7 @@ import sys
 import recipefinder
 
 def display_app_name():
-    # Clears the terminal screen, and displays a title bar.
+    """Clears the terminal screen, and displays a title bar."""
     os.system('cls' if os.name == 'nt' else 'clear')
               
     print("***********************************")
@@ -36,7 +36,6 @@ while userinput != 'S':
             recipe_finder.find_recipe(useringredients)
             time.sleep(5)
         elif userinput == '2':
-            print("\nYour shopping list:")
             recipe_finder.get_shopping_list()
             time.sleep(5)
         elif userinput == 'S':
