@@ -1,11 +1,11 @@
 # recipefinder
-Find a tasty recipe
+Find a tasty recipe frpm spoonacular.com
 
 Technology:
-Python 3.8.5
+- Python 3.8.5
 
 Required Libraries:
-requests (Http library - https://requests.readthedocs.io/en/master/)
+- requests Release v2.24.0 (Http library - https://requests.readthedocs.io/en/master/)
 
 Steps:
 1. Install Python 3.8.5
